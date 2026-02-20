@@ -13,8 +13,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Rostos - Pollo Arrosto",
+  title: "Rosto's™",
   description: "Ristorante specializzato in pollo arrosto dorato e contorni artigianali.",
+  icons: {
+    icon: [{ url: "/img/logo.jpeg?v=3", type: "image/jpeg" }],
+    shortcut: [{ url: "/img/logo.jpeg?v=3", type: "image/jpeg" }],
+    apple: [{ url: "/img/logo.jpeg?v=3", type: "image/jpeg" }],
+  },
 };
 
 export default function RootLayout({

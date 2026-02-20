@@ -20,3 +20,84 @@ body {
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
+
+.rosto-unto {
+  position: relative;
+  isolation: isolate;
+}
+
+.rosto-unto::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    radial-gradient(
+      circle at 18% 62%,
+      color-mix(in srgb, var(--brown) 26%, transparent) 0 2.2%,
+      transparent 2.2% 100%
+    ),
+    radial-gradient(
+      circle at 72% 34%,
+      color-mix(in srgb, var(--brown) 18%, transparent) 0 1.6%,
+      transparent 1.6% 100%
+    ),
+    repeating-linear-gradient(
+      6deg,
+      color-mix(in srgb, var(--brown) 22%, transparent) 0 2px,
+      transparent 2px 12px,
+      color-mix(in srgb, var(--brown) 12%, transparent) 12px 14px,
+      transparent 14px 26px
+    ),
+    radial-gradient(
+      circle at 14% 10%,
+      color-mix(in srgb, var(--sand) 22%, transparent) 0%,
+      transparent 42%
+    ),
+    radial-gradient(
+      circle at 82% 18%,
+      color-mix(in srgb, var(--sand) 14%, transparent) 0%,
+      transparent 36%
+    ),
+    radial-gradient(
+      circle at 50% 72%,
+      color-mix(in srgb, var(--brown) 28%, transparent) 0%,
+      transparent 48%
+    );
+  filter: saturate(106%);
+}
+
+.rosto-unto::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    repeating-linear-gradient(
+      -28deg,
+      color-mix(in srgb, var(--sand) 11%, transparent) 0 1px,
+      transparent 1px 11px,
+      color-mix(in srgb, var(--sand) 7%, transparent) 11px 13px,
+      transparent 13px 24px
+    ),
+    repeating-linear-gradient(
+      26deg,
+      transparent 0 8px,
+      color-mix(in srgb, var(--sand) 6%, transparent) 8px 9px,
+      transparent 9px 18px
+    ),
+    radial-gradient(
+      circle,
+      color-mix(in srgb, var(--black) 30%, transparent) 0 0.8px,
+      transparent 0.8px 100%
+    );
+  background-size: auto, auto, 7px 7px;
+  opacity: 0.3;
+}
+
+.rosto-unto > * {
+  position: relative;
+  z-index: 1;
+}
