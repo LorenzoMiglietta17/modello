@@ -27,9 +27,9 @@ export default function MenuPage() {
             <Image
               src="/img/logo.jpeg"
               alt="Logo Rosto's"
-              width={42}
-              height={42}
-              className="h-10 w-10 rounded-full border border-(--sand)/50 object-cover"
+              width={56}
+              height={56}
+              className="h-14 w-14 object-cover"
               priority
             />
             <p className="text-xl font-bold tracking-wide">Rosto&apos;s™</p>
