@@ -51,10 +51,10 @@ export default function Home() {
               className="h-14 w-14 object-cover"
               priority
             />
-            <p className="brand-title text-xl font-bold tracking-wide">Rosto&apos;s™</p>
+            <p className="brand-title brand-steel text-xl font-bold tracking-wide">Rosto&apos;s™</p>
           </div>
           <nav className="flex flex-wrap items-center gap-4 text-sm sm:gap-6">
-            <a href="/" className={navLinkClass("home")} aria-current={activeSection === "home" ? "page" : undefined}>
+            <a href="/" className="transition-colors hover:text-white">
               Home
             </a>
             <a href="/menu" className="hover:text-white transition-colors">

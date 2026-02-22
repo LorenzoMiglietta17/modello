@@ -2,6 +2,7 @@ import Image from "next/image";
 
 const products = [
   { src: "/img/prodotto1.jpeg", alt: "Pollo intero arrosto Rosto's" },
+  { src: "/img/prodotto2.jpeg", alt: "Pollo arrosto Rosto's prodotto 2" },
   { src: "/img/prodotto3.jpeg", alt: "Mezzo pollo arrosto Rosto's" },
   { src: "/img/prodotto4.jpeg", alt: "Alette di pollo Rosto's" },
   { src: "/img/prodotto5-new.jpeg", alt: "Nuggets di pollo Rosto's" },
@@ -10,11 +11,11 @@ const products = [
 export default function ProductCarousel() {
   return (
     <section className="rounded-3xl border border-(--brown) bg-(--brown)/15 p-3 sm:p-4">
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="flex gap-4 overflow-x-auto pb-1">
         {products.map((product) => (
           <article
             key={product.src}
-            className="group relative overflow-hidden rounded-2xl border border-(--sand)/25 bg-(--black)/35 transition-colors hover:border-(--sand)/45"
+            className="group relative w-65 shrink-0 overflow-hidden rounded-2xl border border-(--sand)/25 bg-(--black)/35 transition-colors hover:border-(--sand)/45 sm:w-70"
           >
             <div className="relative aspect-4/3 w-full p-3 sm:p-4">
               <Image

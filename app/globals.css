@@ -25,7 +25,36 @@ html {
 }
 
 body {
-  background: var(--background);
+  background-color: color-mix(in srgb, var(--brown) 84%, var(--black) 16%);
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    repeating-linear-gradient(
+      90deg,
+      color-mix(in srgb, var(--brown) 82%, var(--black) 18%) 0 3px,
+      color-mix(in srgb, var(--brown) 70%, var(--sand) 30%) 3px 8px,
+      color-mix(in srgb, var(--brown) 86%, var(--black) 14%) 8px 15px,
+      color-mix(in srgb, var(--brown) 74%, var(--sand) 26%) 15px 22px
+    ),
+    radial-gradient(
+      110% 70% at 22% 28%,
+      color-mix(in srgb, var(--sand) 10%, transparent) 0%,
+      transparent 56%
+    ),
+    radial-gradient(
+      95% 60% at 78% 66%,
+      color-mix(in srgb, var(--black) 34%, transparent) 0%,
+      transparent 60%
+    ),
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--brown) 88%, var(--black) 12%) 0%,
+      color-mix(in srgb, var(--brown) 76%, var(--black) 24%) 52%,
+      color-mix(in srgb, var(--brown) 86%, var(--black) 14%) 100%
+    );
+  background-size: auto, 420px 100%, auto, auto, auto;
+  background-position: center, center, center, center, center;
+  background-repeat: no-repeat, repeat, no-repeat, no-repeat, no-repeat;
+  background-attachment: fixed;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -34,9 +63,43 @@ body {
   font-family: var(--font-cinzel), Georgia, serif;
 }
 
+.brand-steel {
+  color: color-mix(in srgb, white 82%, var(--sand) 18%);
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, white 90%, var(--sand) 10%) 0%,
+    color-mix(in srgb, white 70%, var(--black) 30%) 46%,
+    color-mix(in srgb, white 88%, var(--sand) 12%) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow:
+    0 1px 0 color-mix(in srgb, white 28%, transparent),
+    0 2px 6px color-mix(in srgb, var(--black) 44%, transparent);
+}
+
 .rosto-unto {
   position: relative;
   isolation: isolate;
+  background:
+    radial-gradient(
+      130% 90% at 12% 8%,
+      color-mix(in srgb, var(--sand) 4%, transparent) 0%,
+      transparent 40%
+    ),
+    radial-gradient(
+      120% 100% at 82% 78%,
+      color-mix(in srgb, var(--brown) 58%, transparent) 0%,
+      transparent 54%
+    ),
+    linear-gradient(
+      165deg,
+      #080605 0%,
+      #100b09 30%,
+      #1a100d 58%,
+      #090705 100%
+    );
 }
 
 .rosto-unto::before {
@@ -47,38 +110,27 @@ body {
   z-index: 0;
   background-image:
     radial-gradient(
-      circle at 18% 62%,
-      color-mix(in srgb, var(--brown) 26%, transparent) 0 2.2%,
-      transparent 2.2% 100%
+      90% 60% at 20% 60%,
+      color-mix(in srgb, var(--brown) 54%, transparent) 0%,
+      transparent 68%
     ),
     radial-gradient(
-      circle at 72% 34%,
-      color-mix(in srgb, var(--brown) 18%, transparent) 0 1.6%,
-      transparent 1.6% 100%
-    ),
-    repeating-linear-gradient(
-      6deg,
-      color-mix(in srgb, var(--brown) 22%, transparent) 0 2px,
-      transparent 2px 12px,
-      color-mix(in srgb, var(--brown) 12%, transparent) 12px 14px,
-      transparent 14px 26px
+      80% 55% at 76% 28%,
+      color-mix(in srgb, var(--brown) 46%, transparent) 0%,
+      transparent 64%
     ),
     radial-gradient(
-      circle at 14% 10%,
-      color-mix(in srgb, var(--sand) 22%, transparent) 0%,
-      transparent 42%
+      56% 36% at 46% 78%,
+      color-mix(in srgb, var(--black) 64%, transparent) 0%,
+      transparent 70%
     ),
     radial-gradient(
-      circle at 82% 18%,
-      color-mix(in srgb, var(--sand) 14%, transparent) 0%,
-      transparent 36%
-    ),
-    radial-gradient(
-      circle at 50% 72%,
-      color-mix(in srgb, var(--brown) 28%, transparent) 0%,
-      transparent 48%
+      110% 18% at 50% 100%,
+      color-mix(in srgb, var(--sand) 3%, transparent) 0%,
+      transparent 62%
     );
-  filter: saturate(106%);
+  filter: contrast(114%) saturate(82%);
+  mix-blend-mode: multiply;
 }
 
 .rosto-unto::after {
@@ -88,26 +140,23 @@ body {
   pointer-events: none;
   z-index: 0;
   background-image:
-    repeating-linear-gradient(
-      -28deg,
-      color-mix(in srgb, var(--sand) 11%, transparent) 0 1px,
-      transparent 1px 11px,
-      color-mix(in srgb, var(--sand) 7%, transparent) 11px 13px,
-      transparent 13px 24px
+    radial-gradient(
+      120% 12% at 10% 22%,
+      color-mix(in srgb, var(--sand) 5%, transparent) 0%,
+      transparent 66%
     ),
-    repeating-linear-gradient(
-      26deg,
-      transparent 0 8px,
-      color-mix(in srgb, var(--sand) 6%, transparent) 8px 9px,
-      transparent 9px 18px
+    radial-gradient(
+      140% 14% at 82% 64%,
+      color-mix(in srgb, var(--sand) 4%, transparent) 0%,
+      transparent 70%
     ),
     radial-gradient(
       circle,
-      color-mix(in srgb, var(--black) 30%, transparent) 0 0.8px,
+      color-mix(in srgb, var(--black) 34%, transparent) 0 0.8px,
       transparent 0.8px 100%
     );
-  background-size: auto, auto, 7px 7px;
-  opacity: 0.3;
+  background-size: auto, auto, 8px 8px;
+  opacity: 0.26;
 }
 
 .rosto-unto > * {
