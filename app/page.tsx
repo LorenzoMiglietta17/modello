@@ -167,7 +167,9 @@ export default function Home() {
               </svg>
               Telefono
             </p>
-            <p className="mt-2 text-white">+39 02 1234 5678</p>
+            <a href="tel:+393923555502" className="mt-2 inline-block text-white transition-colors hover:text-(--sand)/80">
+              +39 392 3555502
+            </a>
           </div>
         </section>
       </main>
@@ -177,7 +179,7 @@ export default function Home() {
           <p>© {new Date().getFullYear()} Rosto&apos;s™</p>
           <div className="flex flex-wrap items-center justify-center gap-4 sm:justify-end">
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/rostosofficial/?hl=it"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 transition-colors hover:text-white"
@@ -190,7 +192,7 @@ export default function Home() {
               Instagram
             </a>
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/profile.php?id=61579974510870"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 transition-colors hover:text-white"
@@ -201,7 +203,7 @@ export default function Home() {
               Facebook
             </a>
             <a
-              href="https://tiktok.com"
+              href="https://www.tiktok.com/@rostosofficial"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 transition-colors hover:text-white"
