@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ProductCarousel from "./components/product-carousel";
 
 export default function Home() {
   return (
@@ -79,6 +80,11 @@ export default function Home() {
               priority
             />
           </div>
+        </section>
+
+        <section className="space-y-5 rounded-3xl border border-(--brown) bg-(--brown)/10 p-6 sm:p-8 md:p-10">
+          <h2 className="text-2xl font-bold text-white sm:text-3xl">I nostri prodotti</h2>
+          <ProductCarousel />
         </section>
 
         <section id="chi-siamo" className="rounded-3xl border border-(--brown) bg-(--brown)/15 p-6 sm:p-8 md:p-10">
