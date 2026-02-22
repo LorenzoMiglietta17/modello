@@ -189,7 +189,7 @@ export default function MenuPage() {
   
   return (
     <div className="rosto-unto min-h-screen bg-(--black) text-(--sand)">
-    <header className="border-b border-(--brown)/80 bg-(--black)/95 backdrop-blur-sm">
+    <header className="sticky top-0 z-50 border-b border-(--brown)/80 bg-(--black)/95 backdrop-blur-sm">
     <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
     <div className="flex items-center gap-3">
     <Image
@@ -200,7 +200,7 @@ export default function MenuPage() {
     className="h-14 w-14 object-cover"
     priority
     />
-    <p className="text-xl font-bold tracking-wide">Rosto&apos;s™</p>
+    <p className="brand-title text-xl font-bold tracking-wide">Rosto&apos;s™</p>
     </div>
     <nav className="flex flex-wrap items-center gap-4 text-sm sm:gap-6">
     <a href="/" className="hover:text-white transition-colors">

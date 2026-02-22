@@ -1,10 +1,46 @@
+"use client";
+
 import Image from "next/image";
+import { useEffect, useState } from "react";
 import ProductCarousel from "./components/product-carousel";
 
 export default function Home() {
+  const [activeSection, setActiveSection] = useState("home");
+
+  useEffect(() => {
+    const sectionIds = ["chi-siamo", "orari", "contatti"] as const;
+
+    const updateActiveSection = () => {
+      const offset = window.scrollY + 180;
+      let nextActive = "home";
+
+      for (const id of sectionIds) {
+        const section = document.getElementById(id);
+
+        if (section && section.offsetTop <= offset) {
+          nextActive = id;
+        }
+      }
+
+      setActiveSection(nextActive);
+    };
+
+    updateActiveSection();
+    window.addEventListener("scroll", updateActiveSection, { passive: true });
+    window.addEventListener("resize", updateActiveSection);
+
+    return () => {
+      window.removeEventListener("scroll", updateActiveSection);
+      window.removeEventListener("resize", updateActiveSection);
+    };
+  }, []);
+
+  const navLinkClass = (sectionName: string) =>
+    `transition-colors ${activeSection === sectionName ? "text-white" : "hover:text-white"}`;
+
   return (
     <div className="rosto-unto min-h-screen bg-(--black) text-(--sand)">
-      <header className="border-b border-(--brown)/80 bg-(--black)/95 backdrop-blur-sm">
+      <header className="sticky top-0 z-50 border-b border-(--brown)/80 bg-(--black)/95 backdrop-blur-sm">
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
           <div className="flex items-center gap-3">
             <Image
@@ -15,22 +51,22 @@ export default function Home() {
               className="h-14 w-14 object-cover"
               priority
             />
-            <p className="text-xl font-bold tracking-wide">Rosto&apos;s™</p>
+            <p className="brand-title text-xl font-bold tracking-wide">Rosto&apos;s™</p>
           </div>
           <nav className="flex flex-wrap items-center gap-4 text-sm sm:gap-6">
-            <a href="/" className="hover:text-white transition-colors">
+            <a href="/" className={navLinkClass("home")} aria-current={activeSection === "home" ? "page" : undefined}>
               Home
             </a>
             <a href="/menu" className="hover:text-white transition-colors">
               Menù
             </a>
-            <a href="#chi-siamo" className="hover:text-white transition-colors">
+            <a href="#chi-siamo" className={navLinkClass("chi-siamo")} aria-current={activeSection === "chi-siamo" ? "true" : undefined}>
               Chi siamo
             </a>
-            <a href="#orari" className="hover:text-white transition-colors">
+            <a href="#orari" className={navLinkClass("orari")} aria-current={activeSection === "orari" ? "true" : undefined}>
               Orari
             </a>
-            <a href="#contatti" className="hover:text-white transition-colors">
+            <a href="#contatti" className={navLinkClass("contatti")} aria-current={activeSection === "contatti" ? "true" : undefined}>
               Contatti
             </a>
           </nav>
@@ -87,7 +123,7 @@ export default function Home() {
           <ProductCarousel />
         </section>
 
-        <section id="chi-siamo" className="rounded-3xl border border-(--brown) bg-(--brown)/15 p-6 sm:p-8 md:p-10">
+        <section id="chi-siamo" className="scroll-mt-28 rounded-3xl border border-(--brown) bg-(--brown)/15 p-6 sm:p-8 md:p-10">
           <h2 className="text-2xl font-bold text-white sm:text-3xl">Chi siamo</h2>
           <div className="mt-4 max-w-4xl space-y-6 leading-8 text-(--sand)/90">
             <p>
@@ -144,7 +180,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="orari" className="rounded-3xl border border-(--brown) bg-(--brown)/15 p-6 sm:p-8 md:p-10">
+        <section id="orari" className="scroll-mt-28 rounded-3xl border border-(--brown) bg-(--brown)/15 p-6 sm:p-8 md:p-10">
           <h2 className="text-2xl font-bold text-white sm:text-3xl">Orari</h2>
           <div className="mt-6">
             <article className="rounded-2xl border border-(--sand)/25 bg-(--black)/30 p-5 text-center">
@@ -155,7 +191,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contatti" className="grid gap-6 rounded-3xl border border-(--sand)/35 bg-(--black) p-6 sm:grid-cols-2 sm:p-8 lg:grid-cols-2">
+        <section id="contatti" className="scroll-mt-28 grid gap-6 rounded-3xl border border-(--sand)/35 bg-(--black) p-6 sm:grid-cols-2 sm:p-8 lg:grid-cols-2">
           <div>
             <p className="flex items-center gap-2 text-xs uppercase tracking-[0.16em] text-(--sand)/70">
               <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8">

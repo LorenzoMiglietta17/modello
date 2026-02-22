@@ -25,10 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="it">
-      <body
-        className={`${cinzel.variable} antialiased`}
-        style={{ fontFamily: cinzel.style.fontFamily }}
-      >
+      <body className={`${cinzel.variable} antialiased`}>
         {children}
       </body>
     </html>
