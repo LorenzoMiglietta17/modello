@@ -11,19 +11,19 @@ const products = [
 export default function ProductCarousel() {
   return (
     <section className="rounded-3xl border border-(--brown) bg-(--brown)/15 p-3 sm:p-4">
-      <div className="flex gap-4 overflow-x-auto pb-1">
+      <div className="hide-scrollbar flex snap-x snap-mandatory gap-3 overflow-x-auto pb-2 pr-1 lg:snap-none lg:overflow-x-hidden lg:pr-0">
         {products.map((product) => (
           <article
             key={product.src}
-            className="group relative w-65 shrink-0 overflow-hidden rounded-2xl border border-(--sand)/25 bg-(--black)/35 transition-colors hover:border-(--sand)/45 sm:w-70"
+            className="group relative w-full max-w-full shrink-0 snap-start overflow-hidden rounded-2xl border border-(--sand)/25 bg-(--black)/35 transition-colors hover:border-(--sand)/45 sm:w-70 sm:max-w-none lg:w-[calc((100%-3rem)/5)]"
           >
-            <div className="relative aspect-4/3 w-full p-3 sm:p-4">
+            <div className="relative aspect-5/4 w-full bg-(--black)/55 p-2">
               <Image
                 src={product.src}
                 alt={product.alt}
                 fill
-                className="object-contain object-center transition-transform duration-300 group-hover:scale-[1.02]"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
+                className="object-contain object-center"
+                sizes="(max-width: 639px) 100vw, (max-width: 1023px) 280px, 20vw"
               />
             </div>
           </article>
