@@ -74,7 +74,7 @@ export default function Home() {
       </header>
 
       <main className="mx-auto flex w-full max-w-6xl flex-col gap-12 px-4 py-8 sm:px-6 md:gap-16 md:py-14">
-        <section className="grid items-center gap-8 rounded-3xl border border-(--brown) bg-(--brown)/20 p-6 md:grid-cols-2 md:p-10 lg:p-12">
+        <section className="theme-panel grid items-center gap-8 rounded-3xl border p-6 md:grid-cols-2 md:p-10 lg:p-12">
           <div className="space-y-5">
             <p className="inline-block rounded-full bg-(--sand) px-4 py-1 text-[11px] font-bold tracking-[0.2em] text-(--brown) sm:text-xs">
               DAL FORNO ALLA TAVOLA
@@ -101,7 +101,7 @@ export default function Home() {
             </div>
             <a
               href="/menu"
-              className="inline-flex rounded-full bg-(--sand) px-6 py-3 text-sm font-semibold text-(--black) transition hover:brightness-95"
+              className="theme-cta inline-flex rounded-full px-6 py-3 text-sm font-semibold text-(--black) transition"
             >
               Scopri il menù
             </a>
@@ -118,12 +118,12 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="space-y-5 rounded-3xl border border-(--brown) bg-(--brown)/10 p-6 sm:p-8 md:p-10">
+        <section className="theme-panel space-y-5 rounded-3xl border p-6 sm:p-8 md:p-10">
           <h2 className="text-2xl font-bold text-white sm:text-3xl">I nostri prodotti</h2>
           <ProductCarousel />
         </section>
 
-        <section id="chi-siamo" className="scroll-mt-28 rounded-3xl border border-(--brown) bg-(--brown)/15 p-6 sm:p-8 md:p-10">
+        <section id="chi-siamo" className="theme-panel scroll-mt-28 rounded-3xl border p-6 sm:p-8 md:p-10">
           <h2 className="text-2xl font-bold text-white sm:text-3xl">Chi siamo</h2>
           <div className="mt-4 max-w-4xl space-y-6 leading-8 text-(--sand)/90">
             <p>
@@ -180,7 +180,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="orari" className="scroll-mt-28 rounded-3xl border border-(--brown) bg-(--brown)/15 p-6 sm:p-8 md:p-10">
+        <section id="orari" className="theme-panel scroll-mt-28 rounded-3xl border p-6 sm:p-8 md:p-10">
           <h2 className="text-2xl font-bold text-white sm:text-3xl">Orari</h2>
           <div className="mt-6">
             <article className="rounded-2xl border border-(--sand)/25 bg-(--black)/30 p-5 text-center">
@@ -191,7 +191,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="contatti" className="scroll-mt-28 grid gap-6 rounded-3xl border border-(--sand)/35 bg-(--black) p-6 sm:grid-cols-2 sm:p-8 lg:grid-cols-2">
+        <section id="contatti" className="theme-panel-strong scroll-mt-28 grid gap-6 rounded-3xl border p-6 sm:grid-cols-2 sm:p-8 lg:grid-cols-2">
           <div>
             <p className="flex items-center gap-2 text-xs uppercase tracking-[0.16em] text-(--sand)/70">
               <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8">

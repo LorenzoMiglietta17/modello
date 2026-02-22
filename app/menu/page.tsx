@@ -226,7 +226,7 @@ export default function MenuPage() {
     {menuSections.map((section) => (
       <article
       key={section.title}
-      className="h-full rounded-2xl border border-(--brown) bg-(--brown)/20 p-6"
+      className="theme-panel h-full rounded-2xl border p-6"
       >
       <h2 className="flex items-center gap-3 text-xl font-semibold text-white">
       <span aria-hidden="true" className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-(--brown)/80 bg-(--black)/40">
