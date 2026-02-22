@@ -239,7 +239,7 @@ export default function MenuPage() {
         {section.items.map((item) => (
           <li key={item.name} className="flex items-center justify-between gap-4">
           <span>{item.name}</span>
-          <span className="font-semibold text-white">{item.price}</span>
+          <span className="shrink-0 whitespace-nowrap font-semibold text-white">{item.price}</span>
           </li>
         ))}
         </ul>
