@@ -26,11 +26,20 @@ html {
 
 body {
   background-color: var(--background);
-  background-image: url("/img/legnobruciato.png");
+  background-image:
+    radial-gradient(
+      circle at 20% 10%,
+      color-mix(in srgb, var(--brown) 28%, var(--black) 72%) 0%,
+      transparent 42%
+    ),
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--black) 86%, var(--brown) 14%) 0%,
+      color-mix(in srgb, var(--black) 94%, var(--brown) 6%) 100%
+    );
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -62,21 +71,36 @@ body {
 }
 
 .rosto-unto::before {
-  content: none;
+  content: "";
   position: absolute;
   inset: 0;
   pointer-events: none;
   z-index: 0;
-  background-image: none;
+  background-image:
+    radial-gradient(
+      circle at 18% 8%,
+      color-mix(in srgb, var(--sand) 3%, transparent) 0%,
+      transparent 36%
+    ),
+    radial-gradient(
+      circle at 80% 28%,
+      color-mix(in srgb, var(--brown) 30%, transparent) 0%,
+      transparent 42%
+    );
 }
 
 .rosto-unto::after {
-  content: none;
+  content: "";
   position: absolute;
   inset: 0;
   pointer-events: none;
   z-index: 0;
-  background-image: none;
+  background-image: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--sand) 1%, transparent) 0%,
+    transparent 35%,
+    color-mix(in srgb, var(--brown) 20%, transparent) 100%
+  );
 }
 
 .rosto-unto > * {
@@ -85,12 +109,21 @@ body {
 }
 
 .theme-panel {
-  background: transparent;
+  background-image: linear-gradient(
+    160deg,
+    color-mix(in srgb, var(--brown) 28%, var(--black) 72%) 0%,
+    color-mix(in srgb, var(--brown) 12%, var(--black) 88%) 55%,
+    color-mix(in srgb, var(--sand) 2%, var(--black) 98%) 100%
+  );
   border-color: color-mix(in srgb, var(--brown) 90%, var(--sand) 10%);
 }
 
 .theme-panel-strong {
-  background: transparent;
+  background-image: linear-gradient(
+    150deg,
+    color-mix(in srgb, var(--brown) 36%, var(--black) 64%) 0%,
+    color-mix(in srgb, var(--black) 94%, var(--brown) 6%) 100%
+  );
   border-color: color-mix(in srgb, var(--sand) 18%, var(--brown) 82%);
 }
 
