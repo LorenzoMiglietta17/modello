@@ -188,7 +188,7 @@ export default function MenuPage() {
   ];
   
   return (
-    <div className="rosto-unto min-h-screen bg-(--black) text-(--sand)">
+    <div className="rosto-unto min-h-screen text-(--sand)">
     <header className="sticky top-0 z-50 border-b border-(--brown)/80 bg-(--black)/95 backdrop-blur-sm">
     <div className="mx-auto flex w-full max-w-6xl flex-col gap-4 px-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:px-6">
     <div className="flex items-center gap-3">

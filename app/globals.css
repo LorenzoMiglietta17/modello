@@ -25,35 +25,11 @@ html {
 }
 
 body {
-  background-color: color-mix(in srgb, var(--brown) 84%, var(--black) 16%);
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    repeating-linear-gradient(
-      90deg,
-      color-mix(in srgb, var(--brown) 82%, var(--black) 18%) 0 3px,
-      color-mix(in srgb, var(--brown) 70%, var(--sand) 30%) 3px 8px,
-      color-mix(in srgb, var(--brown) 86%, var(--black) 14%) 8px 15px,
-      color-mix(in srgb, var(--brown) 74%, var(--sand) 26%) 15px 22px
-    ),
-    radial-gradient(
-      110% 70% at 22% 28%,
-      color-mix(in srgb, var(--sand) 10%, transparent) 0%,
-      transparent 56%
-    ),
-    radial-gradient(
-      95% 60% at 78% 66%,
-      color-mix(in srgb, var(--black) 34%, transparent) 0%,
-      transparent 60%
-    ),
-    linear-gradient(
-      135deg,
-      color-mix(in srgb, var(--brown) 88%, var(--black) 12%) 0%,
-      color-mix(in srgb, var(--brown) 76%, var(--black) 24%) 52%,
-      color-mix(in srgb, var(--brown) 86%, var(--black) 14%) 100%
-    );
-  background-size: auto, 420px 100%, auto, auto, auto;
-  background-position: center, center, center, center, center;
-  background-repeat: no-repeat, repeat, no-repeat, no-repeat, no-repeat;
+  background-color: var(--black);
+  background-image: url("/img/legno.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   background-attachment: fixed;
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
@@ -82,81 +58,25 @@ body {
 .rosto-unto {
   position: relative;
   isolation: isolate;
-  background:
-    radial-gradient(
-      130% 90% at 12% 8%,
-      color-mix(in srgb, var(--sand) 4%, transparent) 0%,
-      transparent 40%
-    ),
-    radial-gradient(
-      120% 100% at 82% 78%,
-      color-mix(in srgb, var(--brown) 58%, transparent) 0%,
-      transparent 54%
-    ),
-    linear-gradient(
-      165deg,
-      #080605 0%,
-      #100b09 30%,
-      #1a100d 58%,
-      #090705 100%
-    );
+  background: transparent;
 }
 
 .rosto-unto::before {
-  content: "";
+  content: none;
   position: absolute;
   inset: 0;
   pointer-events: none;
   z-index: 0;
-  background-image:
-    radial-gradient(
-      90% 60% at 20% 60%,
-      color-mix(in srgb, var(--brown) 54%, transparent) 0%,
-      transparent 68%
-    ),
-    radial-gradient(
-      80% 55% at 76% 28%,
-      color-mix(in srgb, var(--brown) 46%, transparent) 0%,
-      transparent 64%
-    ),
-    radial-gradient(
-      56% 36% at 46% 78%,
-      color-mix(in srgb, var(--black) 64%, transparent) 0%,
-      transparent 70%
-    ),
-    radial-gradient(
-      110% 18% at 50% 100%,
-      color-mix(in srgb, var(--sand) 3%, transparent) 0%,
-      transparent 62%
-    );
-  filter: contrast(114%) saturate(82%);
-  mix-blend-mode: multiply;
+  background-image: none;
 }
 
 .rosto-unto::after {
-  content: "";
+  content: none;
   position: absolute;
   inset: 0;
   pointer-events: none;
   z-index: 0;
-  background-image:
-    radial-gradient(
-      120% 12% at 10% 22%,
-      color-mix(in srgb, var(--sand) 5%, transparent) 0%,
-      transparent 66%
-    ),
-    radial-gradient(
-      140% 14% at 82% 64%,
-      color-mix(in srgb, var(--sand) 4%, transparent) 0%,
-      transparent 70%
-    ),
-    radial-gradient(
-      circle,
-      color-mix(in srgb, var(--black) 34%, transparent) 0 0.8px,
-      transparent 0.8px 100%
-    );
-  background-size: auto, auto, 8px 8px;
-  opacity: 0.26;
+  background-image: none;
 }
 
 .rosto-unto > * {
