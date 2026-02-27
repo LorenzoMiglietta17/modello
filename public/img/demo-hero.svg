@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" fill="none">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1600" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="150" y1="120" x2="1450" y2="860" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#60A5FA"/>
+      <stop offset="1" stop-color="#1E3A8A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#g1)"/>
+  <rect x="120" y="120" width="1360" height="760" rx="48" fill="url(#g2)" fill-opacity="0.45"/>
+  <circle cx="350" cy="300" r="140" fill="#93C5FD" fill-opacity="0.35"/>
+  <circle cx="1250" cy="700" r="180" fill="#BFDBFE" fill-opacity="0.25"/>
+  <path d="M320 640C470 500 720 500 890 640C1060 780 1280 780 1400 640" stroke="#DBEAFE" stroke-width="18" stroke-linecap="round"/>
+  <text x="180" y="860" fill="#EFF6FF" font-family="Arial, Helvetica, sans-serif" font-size="72" font-weight="700">Demo Cover</text>
+</svg>

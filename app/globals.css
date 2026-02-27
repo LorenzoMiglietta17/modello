@@ -1,11 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --black: #0b0807;
-  --brown: #2b170f;
-  --sand: #d8be8a;
-  --background: #0b0807;
-  --foreground: #f2e6cd;
+  --background: #eef3fb;
+  --foreground: #0f172a;
+  --surface: #ffffff;
+  --surface-strong: #dde7f5;
+  --border: #bfd0ea;
+  --muted: #334155;
+  --primary: #1d4ed8;
+  --primary-strong: #1e40af;
 }
 
 @theme inline {
@@ -26,118 +29,69 @@ html {
 
 body {
   background-color: var(--background);
-  background-image:
-    radial-gradient(
-      circle at 20% 10%,
-      color-mix(in srgb, var(--brown) 28%, var(--black) 72%) 0%,
-      transparent 42%
-    ),
-    linear-gradient(
-      180deg,
-      color-mix(in srgb, var(--black) 86%, var(--brown) 14%) 0%,
-      color-mix(in srgb, var(--black) 94%, var(--brown) 6%) 100%
-    );
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-image: radial-gradient(circle at 8% 0%, #f8fbff 0%, transparent 32%);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.brand-title {
-  font-family: var(--font-cinzel), Georgia, serif;
+.site-shell {
+  background: linear-gradient(180deg, #f4f8ff 0%, var(--background) 100%);
 }
 
-.brand-steel {
-  color: color-mix(in srgb, #b87333 78%, #f2c078 22%);
-  background: linear-gradient(
-    180deg,
-    color-mix(in srgb, #e8b06f 86%, #ffffff 14%) 0%,
-    color-mix(in srgb, #b87333 74%, #3a1f12 26%) 46%,
-    color-mix(in srgb, #d18a46 82%, #f4c98d 18%) 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow:
-    0 1px 0 color-mix(in srgb, #ffd7ac 24%, transparent),
-    0 2px 6px color-mix(in srgb, #3a1f12 46%, transparent);
+.surface-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
 }
 
-.rosto-unto {
-  position: relative;
-  isolation: isolate;
-  background: transparent;
+.button-primary {
+  background-color: var(--primary);
+  color: #ffffff;
+  border-radius: 999px;
+  padding: 0.6rem 1rem;
+  font-weight: 600;
 }
 
-.rosto-unto::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  background-image:
-    radial-gradient(
-      circle at 18% 8%,
-      color-mix(in srgb, var(--sand) 3%, transparent) 0%,
-      transparent 36%
-    ),
-    radial-gradient(
-      circle at 80% 28%,
-      color-mix(in srgb, var(--brown) 30%, transparent) 0%,
-      transparent 42%
-    );
+.button-primary:hover {
+  background-color: var(--primary-strong);
 }
 
-.rosto-unto::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  background-image: linear-gradient(
-    135deg,
-    color-mix(in srgb, var(--sand) 1%, transparent) 0%,
-    transparent 35%,
-    color-mix(in srgb, var(--brown) 20%, transparent) 100%
-  );
+.fade-up {
+  animation: fadeUp 0.7s ease-out both;
 }
 
-.rosto-unto > * {
-  position: relative;
-  z-index: 1;
+.float-soft {
+  animation: floatSoft 5s ease-in-out infinite;
 }
 
-.theme-panel {
-  background-image: linear-gradient(
-    160deg,
-    color-mix(in srgb, var(--brown) 28%, var(--black) 72%) 0%,
-    color-mix(in srgb, var(--brown) 12%, var(--black) 88%) 55%,
-    color-mix(in srgb, var(--sand) 2%, var(--black) 98%) 100%
-  );
-  border-color: color-mix(in srgb, var(--brown) 90%, var(--sand) 10%);
+.card-lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.theme-panel-strong {
-  background-image: linear-gradient(
-    150deg,
-    color-mix(in srgb, var(--brown) 36%, var(--black) 64%) 0%,
-    color-mix(in srgb, var(--black) 94%, var(--brown) 6%) 100%
-  );
-  border-color: color-mix(in srgb, var(--sand) 18%, var(--brown) 82%);
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px color-mix(in srgb, #0f172a 14%, transparent);
 }
 
-.theme-cta {
-  background-image: linear-gradient(
-    180deg,
-    color-mix(in srgb, var(--sand) 92%, #ffffff 8%) 0%,
-    color-mix(in srgb, var(--sand) 78%, var(--brown) 22%) 100%
-  );
-  box-shadow: 0 10px 24px color-mix(in srgb, var(--brown) 40%, transparent);
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.theme-cta:hover {
-  filter: brightness(1.03);
+@keyframes floatSoft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
 }
 
 .hide-scrollbar {
